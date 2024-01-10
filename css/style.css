@@ -14,11 +14,12 @@ img {
 
 
 
-
+/*header*/
 header {
-    display: flex;
     height: 80px;
     width: 100%;
+
+    display: flex;
     justify-content: space-between;
     padding: 20px;
 }
@@ -28,14 +29,46 @@ header {
     gap: 30px;
 }
 
+/*main*/
 main {
     background-color: #7FFFD4;
     min-width: 100vw;
     min-height: calc(100vh - 130px);
 }
 
+#grid {
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.cell {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+
+    border: 2px solid black;
+
+    cursor: pointer;
+}
+
+.cell.clicked {
+    background-color: aqua;
+}
+
+
+
+
+
+
+/*footer*/
 footer {
     display: flex;
     align-items: center;
+
     height: 50px;
+    padding: 20px;
 }
