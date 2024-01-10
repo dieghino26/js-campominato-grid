@@ -9,20 +9,29 @@ const rows = 10
 const cols = 10
 const totalCells = rows * cols
 
-button.addEventListener("click", function () {
-    for (let i = 0; i < totalCells; i++) {
-        //cella
-        const cell = document.createElement("div")
-        cell.className = "cell"
-        cell.innerText = i + 1
-        //aggiungere in pagina
-        grid.appendChild(cell)
+let createGrid = false
 
-        cell.addEventListener("click", function () {
-            cell.classList.toggle("clicked")
-            console.log(i + 1)
-        })
+button.addEventListener("click", function () {
+
+    if (!createGrid) {
+        for (let i = 0; i < totalCells; i++) {
+            //cella
+            const cell = document.createElement("div")
+            cell.className = "cell"
+            cell.innerText = i + 1
+            //aggiungere in pagina
+            grid.appendChild(cell)
+
+            cell.addEventListener("click", function () {
+                cell.classList.toggle("clicked")
+                console.log(i + 1)
+            })
+        }
+        createGrid = true
+
     }
+
+
 
 
 
